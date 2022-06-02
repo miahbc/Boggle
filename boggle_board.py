@@ -3,16 +3,16 @@ import random
 
 class BoggleBoard:
   
-  def __init__(self, board=[[]]*4):
+  def __init__(self, board=[["_"]*4 for i in range(4)])):
     self.board = board
 
   def shake(self):
-    abc = string.ascii_uppercase.replace('Q','Qu')
+    abc = string.ascii_uppercase
     print(abc)
-    for line in self.board:
-      for j in range(len(self.board)):
+    for i,k in enumerate(self.board)
+      for j,p in enumerate(k):
         rand = random.choice(abc)
-        line.append(rand)
+        self.board[i][j] = rand
       print(self.board)
 
 
